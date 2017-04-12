@@ -1,7 +1,7 @@
 # dhcp-scapy-server
-Simple scapy script that listen for DHCP discover/requests and set an IP address
+Simple scapy script that listen to DHCP discover/requests and set an IP address to client.
 
-Everything on the script is hardcoded. Anyone could adapt it to argv (yeah I'm lazy).
+Everything on the script is hardcoded (yeah I'm very lazy). You could adapt it to `args`.
 
 If you're lazy too just change these variables:
 
