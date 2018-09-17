@@ -4,7 +4,7 @@ from scapy.all import *
 
 conf.ipv6_enabled=False
 conf.iface='eno1'
-MY_HW_ADDR='10:98:36:fc:8a:1f'
+MY_HW_ADDR='aa:aa:aa:aa:aa:aa'
 MY_IP_ADDR='192.168.10.1'
 HIS_IP_ADDR='192.168.10.2'
 HIS_DNS_SERVER='8.8.8.8'
