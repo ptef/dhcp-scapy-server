@@ -1,18 +1,18 @@
-#!/usr/bin/python2
+#!/usr/bin/env python3
 
-from scapy.all import *
+from kamene.all import *
 
 conf.ipv6_enabled=False
-conf.iface='eno1'
-MY_HW_ADDR='aa:aa:aa:aa:aa:aa'
-MY_IP_ADDR='192.168.10.1'
-HIS_IP_ADDR='192.168.10.2'
+conf.iface='enp60s0'
+MY_HW_ADDR='aa:aa:aa:bb:bb:bb'
+MY_IP_ADDR='192.168.50.10'
+HIS_IP_ADDR='192.168.50.20'
 HIS_DNS_SERVER='8.8.8.8'
 
 
 def parse_packet(p):
     if not (p.haslayer(BOOTP) and p.haslayer(DHCP) and p.haslayer(UDP)):
-       print '[-] not yet..'
+       print('[-] not yet..')
        return
 
     # Ether / IP / UDP
