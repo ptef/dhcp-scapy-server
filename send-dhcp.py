@@ -20,7 +20,7 @@ def parse_packet(p):
     i=IP(src=MY_IP_ADDR, dst='192.168.10.2')
     u=UDP(sport=67, dport=68)
     b=BOOTP(op=2, xid=p[BOOTP].xid, yiaddr=HIS_IP_ADDR, siaddr=MY_IP_ADDR, chaddr=p[BOOTP].chaddr)
-    d=DHCP(options=[ ('message-type','offer'), ('server_id', MY_IP_ADDR), ('lease_time', 600), ('subnet_mask', '255.255.255.224'), ('router', MY_IP_ADDR), ('name_server', HIS_DNS_SERVER), 'end'])
+    d=DHCP(options=[ ('message-type','offer'), ('server_id', MY_IP_ADDR), ('lease_time', 9000), ('subnet_mask', '255.255.255.224'), ('router', MY_IP_ADDR), ('name_server', HIS_DNS_SERVER), 'end'])
 
     for op in p[DHCP].options:
         if op[0]=='message-type' and op[1]==1:
